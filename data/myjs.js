@@ -1,6 +1,9 @@
 //var host = "http://localhost:8001";
 var host = "http://maccontroller.herokuapp.com";
 var socket = io.connect(host);
+// For a prototype this is good enough
+// But there's some stuff out there about making uuids in javascript more robust:
+// http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript
 var uid = Math.random().toString(36).slice(2);
 
 self.postMessage({"uid": uid});
