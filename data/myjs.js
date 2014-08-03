@@ -5,6 +5,7 @@ var uid = Math.random().toString(36).slice(2);
 
 self.postMessage({"uid": uid});
 
+// Need some comments in the function below
 socket.on(uid, function (data) {
     console.log(data);
     if (data.newTab) {
@@ -15,7 +16,7 @@ socket.on(uid, function (data) {
             return;
         if (directive > 4) {
             self.postMessage(self.postMessage({"toDo": directive}));
-        } else
+        } else  // Keep the curly braces or no curly braces consistent for if/else with one line
             $("a#"+directive).click();
     }
 });
