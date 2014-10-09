@@ -1,9 +1,9 @@
 {
-  "name": "controller-addon",
-  "title": "controller-addon",
+  "name": "cntrl-io",
+  "title": "cntrl-io",
   "id": "jid1-feDNnLS8jlCw1g",
-  "description": "a basic add-on",
+  "description": "Cntrl.io firefox add-on",
   "author": "",
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "0.2"
 }

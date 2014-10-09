@@ -1,5 +1,5 @@
 //var host = "http://localhost:8001";
-var host = "http://maccontroller.herokuapp.com";
+var host = "http://cntrl.herokuapp.com";
 var socket = io.connect(host);
 var uid = Math.random().toString(36).slice(2);
 
@@ -11,12 +11,14 @@ socket.on(uid, function (data) {
         self.postMessage({"newTab": data.newTab});
     } else {
         var directive = parseInt(data);
-        if (isNaN(directive))
+        if (isNaN(directive)) {
             return;
+        }
         if (directive > 4) {
             self.postMessage(self.postMessage({"toDo": directive}));
-        } else
-            $("a#"+directive).click();
+        } else {
+            $("a#" + directive).click();
+        }
     }
 });
 
